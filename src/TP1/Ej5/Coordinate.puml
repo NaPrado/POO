@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Coordinate{
+    -double latitude
+    -double longitude
+    +Coordinate(double latitude, double longitude)
+    +getLatitude()
+    +getLongitude()
+    +boolean isSouthernHemisphere()
+    +boolean isWesternHemisphere()
+}
+
+@enduml

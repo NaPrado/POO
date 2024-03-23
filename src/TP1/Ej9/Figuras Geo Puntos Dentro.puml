@@ -1,0 +1,60 @@
+@startuml
+
+class Point{
+    -double x
+    -double y
+    +Point()
+    +double getX()
+    +double getY()
+    +double distance(Point point)
+}
+
+Abstract class Figure{
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+
+class Rectangle{
+    -Point upRight
+    -Point downLeft
+    +Rectangle(Point upRight, Point downLeft)
+    +double base()
+    +double height()
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+Figure <|-- Rectangle
+
+class Triangle{
+    -Point first
+    -Point second
+    -Point third
+    +Triangle(Point first, Point second, Point third)
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+Figure <|-- Triangle
+
+class Ellipse{
+    -Point centerPoint
+    -double xAxis
+    -double yAxis
+    +Ellipse(Point centerPoint, double xAxis, double yAxis)
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+Figure <|-- Ellipse
+
+class Circle{
+    Circle(Point centerPoint, double radius)
+}
+Ellipse <|-- Circle
+
+Rectangle *-- Point
+Triangle *-- Point
+Ellipse *-- Point
+@enduml

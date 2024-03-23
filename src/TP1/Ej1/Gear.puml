@@ -1,0 +1,13 @@
+@startuml
+
+class Gear {
+    -int chainRing
+    -double cog
+    -double ratio
+    +Gear(chainRing,cog)
+    +getChainRing()
+    +getCog()
+    +getRatio()
+}
+
+@enduml

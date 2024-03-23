@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Date{
+    -int day
+    -int month
+    -int year
+    +Date(day,month,year)
+    +string getDate()
+    +int getDay()
+    +int getMont()
+    +int getYear()
+}
+
+class Affiliate {
+    -string name
+    -string surname
+    -Date bornDate
+    -int id
+    - {static} initialId = 1000
+    - {static} lastId
+    +Affiliate(string name,string surname,Date bornDate)
+    -getAndIncrement()
+}
+
+
+@enduml

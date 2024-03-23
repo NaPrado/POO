@@ -1,0 +1,33 @@
+@startuml
+
+class Empresa{
+    -int costoViaje
+    +Empresa(int costoViaje)
+    +int getCostoViaje()
+    +void changeCosto(int costo)
+}
+abstract class Card{
+    -Empresa central
+    #booblean canRide()
+    +void viaje()
+}
+Card *-- Empresa
+
+class CardSube{
+    -int saldo
+    +CardSube(Empresa central)
+    +int cargar(int cuanto)
+    +int getSaldo()
+    +int viaje()
+    #booblean canRide()
+}
+Card <|-- CardSube
+
+class CardViajes{
+    -int cantidadRestante
+    +CardViajes(Empresa central)
+    +int viaje()
+    #booblean canRide()
+}
+Card <|-- CardViajes
+@enduml
