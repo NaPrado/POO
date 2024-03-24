@@ -1,0 +1,1 @@
+Compara "punteros" o referencias, siempre false

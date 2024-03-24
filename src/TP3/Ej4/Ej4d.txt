@@ -1,0 +1,1 @@
+Como le pasamos una instancia tipo Number entonces el compilador usa el metodo del padre

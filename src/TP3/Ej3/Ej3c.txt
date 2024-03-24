@@ -1,0 +1,1 @@
+Equals no funciona porque estamos usando tipos primitivos

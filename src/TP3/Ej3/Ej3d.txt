@@ -1,0 +1,1 @@
+Le pregunto si p (un objeto tipo Point) es objeto, obvio que si

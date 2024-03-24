@@ -1,0 +1,1 @@
+No se puede instanciar un hijo con el constructor de su padre puesto que la herencia es en un solo sentido

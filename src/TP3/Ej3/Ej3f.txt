@@ -1,0 +1,1 @@
+nunca se asigna un valor al arreglo de points

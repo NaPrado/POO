@@ -1,0 +1,1 @@
+Se ejecuta correctamente usando el metodo de ClassB puesto el obj es de tipo classB

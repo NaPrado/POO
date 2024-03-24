@@ -1,0 +1,2 @@
+instanceOf compara la clase de una instancia dada con una clase tambien dada y devuelve un valor boolean
+getClass sirve para saber la clase de una instacia, devuelve un tipo class

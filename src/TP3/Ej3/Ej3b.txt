@@ -1,0 +1,10 @@
+No esta implementado equals en Point entonces equals no sabe que hacer
+
+deberiamos implementar algo asi
+
+@override
+public equals(Point a){
+    return this.toString().equals(a.toString());
+}
+
+no es tal cual, solo es una idea rapida

@@ -1,0 +1,2 @@
+Se produce un error en tiempo de ejecución, dado que no es posible castear una instancia de una
+clase a alguna de sus subclases.
