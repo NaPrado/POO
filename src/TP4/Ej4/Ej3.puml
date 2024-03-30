@@ -1,0 +1,121 @@
+@startuml
+
+class Point{
+    #double x
+    #double y
+    +Point()
+    +double getX()
+    +double getY()
+    +double distance(Point point)
+}
+
+Abstract class Figure{
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+
+class Rectangle{
+    -Point upRight
+    -Point downLeft
+    +Rectangle(Point upRight, Point downLeft)
+    +double base()
+    +double height()
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+
+class Triangle{
+    -Point first
+    -Point second
+    -Point third
+    +Triangle(Point first, Point second, Point third)
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+
+class Ellipse{
+    -Point centerPoint
+    -double xAxis
+    -double yAxis
+    +Ellipse(Point centerPoint, double xAxis, double yAxis)
+    +double area()
+    +double perimeter()
+    +boolean belongs(Point point)
+}
+
+class Circle{
+    +Circle(Point centerPoint, double radius)
+}
+
+Figure <|-- Rectangle
+Figure <|-- Triangle
+Figure <|-- Ellipse
+Ellipse <|-- Circle
+
+Point --* Rectangle
+Point --* Triangle
+Point --* Ellipse
+Point --* Circle
+
+interface Movable{
+    +void moveNorth(double delta)
+    +void moveSouth(double delta)
+    +void moveWest(double delta)
+    +void moveEast(double delta)
+}
+
+class MovablePoint{
+    +MovablePoint(double x, double y)
+    +void moveNorth(double delta)
+    +void moveSouth(double delta)
+    +void moveWest(double delta)
+    +void moveEast(double delta)
+}
+
+class MovableRectangle{
+    +MovableRectangle(MovablePoint upRight,MovablePoint downLeft)
+    +MovablePoint[] getPoints()
+}
+
+class MovableTriangle{
+    +MovableTriangle(MovablePoint first, MovablePoint second, MovablePoint third)
+    +MovablePoint[] getPoints()
+}
+
+class MovableEllipse{
+    +MovableEllipse(MovablePointPoint centerPoint, double xAxis, double yAxis)
+    +MovablePoint[] getPoints()
+}
+
+class MovableCircle{
+    +MovableCircle(MovablePoint centerPoint, double radius)
+    +MovablePoint[] getPoints()
+}
+
+interface MovableFigure{
+    +MovablePoint[] getPoints()
+    +void moveNorth(double delta)
+    +void moveSouth(double delta)
+    +void moveWest(double delta)
+    +void moveEast(double delta)
+}
+
+MovableRectangle ..|> MovableFigure
+MovableTriangle ..|> MovableFigure
+MovableEllipse ..|> MovableFigure
+MovableCircle ..|> MovableFigure
+
+Rectangle <|-- MovableRectangle
+Triangle <|-- MovableTriangle
+Ellipse <|-- MovableEllipse
+Circle <|-- MovableCircle
+
+MovableFigure --|> Movable
+
+Movable <|.. MovablePoint
+Point <|-- MovablePoint
+
+@enduml
