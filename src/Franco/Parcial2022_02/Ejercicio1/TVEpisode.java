@@ -1,9 +1,9 @@
 package Franco.Parcial2022_02.Ejercicio1;
 
 import java.time.LocalDate;
-/*
+import java.util.Comparator;
 
-public class TVEpisode {
+public class TVEpisode implements Comparable<TVEpisode>{
     private final int id;
     private final String title;
     private final double rating;
@@ -27,10 +27,18 @@ public class TVEpisode {
     public double getRating() {
         return rating;
     }
-
     public LocalDate getAiredDate() {
         return airedDate;
     }
+
+    @Override
+    public int compareTo(TVEpisode o) {
+        return Integer.compare(this.id,o.id);
+    }
+
+    @Override
+    public String toString() {
+        return "(%d) Episode %s aired on %s has %.2f rating".formatted(id,title,airedDate,rating);
+    }
 }
 
-*/

@@ -1,7 +1,6 @@
 package Franco.Parcial2022_02.Ejercicio1;
 
 import java.time.LocalDate;
-/*
 public class TVSeasonTester {
     public static void main(String[] args) {
         System.out.println(LocalDate.of(2022,9,19)); // 2022-09-19
@@ -39,5 +38,5 @@ public class TVSeasonTester {
         // (89) Episode 2_d3bug.mkv aired on 2022-09-20 has 8.90 rating
         // (234) Episode 0_hellofriend.mov aired on 2022-09-19 has 8.50 rating
     }
-}*/
+}
 

@@ -2,6 +2,7 @@ package Taller.Taller5.Ej4;
 
 import java.util.Iterator;
 
+/*
 public class ListTester {
 
     public static void main(String[] args) {
@@ -24,4 +25,5 @@ public class ListTester {
     }
 
 }
+*/
 

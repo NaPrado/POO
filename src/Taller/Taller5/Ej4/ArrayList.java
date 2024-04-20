@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/*
 public class ArrayList< T extends Comparable <? super T > >   implements List<T>, Iterable<T>{
     private static final int INITIAL_DIM = 5;
     private T[] array = (T[]) new Comparable[INITIAL_DIM];
@@ -91,3 +92,4 @@ public class ArrayList< T extends Comparable <? super T > >   implements List<T>
         };
     }
 }
+*/
