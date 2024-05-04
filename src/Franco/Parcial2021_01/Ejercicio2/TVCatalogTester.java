@@ -1,4 +1,4 @@
-package Franco.Parcial2021_01.Ejercicio2;
+/*package Franco.Parcial2021_01.Ejercicio2;
 
 public class TVCatalogTester {
 
@@ -64,5 +64,5 @@ public class TVCatalogTester {
         System.out.println("----------");
     }
 
-}
+}*/
 

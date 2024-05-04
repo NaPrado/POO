@@ -35,6 +35,6 @@ public class ArrayTVCatalog implements TVCatalog {
             public TVResponse next() {
                 return null;
             }
-        }
+        };
     }
 }
