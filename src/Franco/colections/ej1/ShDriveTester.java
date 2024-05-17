@@ -1,4 +1,4 @@
-package Franco.colections;
+package Franco.colections.ej1;
 
 public class ShDriveTester {
     public static void main(String[] args) {

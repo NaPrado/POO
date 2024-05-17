@@ -1,0 +1,44 @@
+package Guias.TP6.Ej4;
+
+import java.util.Objects;
+
+public abstract class BankAccount {
+    private final int id;
+    private double balance;
+    BankAccount(int id){
+        this.id=id;
+        this.balance=balance;
+    }
+    public void deposit(double amount){
+        this.balance=+amount;
+    }
+    public void extract (double amount){
+        if (canExtract(amount)){
+            this.balance -= amount;
+        }
+        else{
+            System.out.println("Extract cannot be done, no enough founds");
+        }
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public int getId() {
+        return id;
+    }
+    protected abstract boolean canExtract(double amount);
+
+    @Override
+    public String toString() {
+        return "Id:%d Balance:%.2f".formatted(id,balance);
+    }
+    @Override
+    public boolean equals(Object o) {
+        return o instanceof BankAccount that &&
+                id == that.id;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+}

@@ -1,4 +1,4 @@
-package Franco.colections;
+package Franco.colections.ej1;
 
 import java.util.ArrayList;
 import java.util.SequencedCollection;
