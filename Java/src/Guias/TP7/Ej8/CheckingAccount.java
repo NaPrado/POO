@@ -1,4 +1,5 @@
-package Guias.TP6.Ej4;
+/*
+package Guias.TP7.Ej8;
 
 public class CheckingAccount extends BankAccount {
     private final double overDraft;
@@ -16,3 +17,4 @@ public class CheckingAccount extends BankAccount {
         return overDraft;
     }
 }
+*/
