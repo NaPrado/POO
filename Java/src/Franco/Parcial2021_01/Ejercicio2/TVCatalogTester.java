@@ -58,8 +58,8 @@ public class TVCatalogTester {
         try {
             // Lanza un error si los parámetros mínimo o máximo son incorrectos
             tvCatalog.setRatingRange(-1.0, 9.0);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+        } catch (Exception navegador) {
+            System.out.println(navegador.getMessage());
         }
         System.out.println("----------");
     }

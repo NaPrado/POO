@@ -20,8 +20,8 @@ public class LoanTester {
         try {
             // Ocurre un error pues la fecha de pago no es posterior a la fecha del préstamo
             l1.pay(2, LocalDate.of(2000, 1, 1));
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Cannot pay.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Cannot pay.
         }
         // No se verifica que la cuota 5 sea menor a 3 o que la cuota 1 no se haya pagado.
         l1.pay(5, LocalDate.of(2022, 10, 1)); // Paying quota 5 on date 2022-10-01.
@@ -30,8 +30,8 @@ public class LoanTester {
         try {
             // Ocurre un error pues no hay más cuotas pendientes
             l1.pay(1, LocalDate.of(2022, 10, 1));
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Cannot pay.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Cannot pay.
         }
 
         // Se instancia un préstamo AUTOMOTOR de $2000 de 3 cuotas con fecha 1/9/2022
@@ -46,8 +46,8 @@ public class LoanTester {
         try {
             // Ocurre un error pues se intenta pagar la cuota 3 pero la última paga es la 1
             l2.pay(3, LocalDate.of(2022, 11, 1));
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Cannot pay.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Cannot pay.
         }
         l2.pay(2, LocalDate.of(2022, 9, 2)); // Paying quota 2 on date 2022-09-02.
         System.out.println(l2); // VEHICLE Loan of $2000. Remaining quota: 1. Last quota: 2.
@@ -70,8 +70,8 @@ public class LoanTester {
         try {
             // Ocurre un error pues la fecha de pago no es posterior a la del último pago
             l3.pay(2, LocalDate.of(2022, 9, 2));
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Cannot pay.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Cannot pay.
         }
         l3.pay(2, LocalDate.of(2022, 12, 27)); // Paying quota 2 on date 2022-12-27.
         l3.pay(3, LocalDate.of(2022, 12, 28)); // Paying quota 3 on date 2022-12-28.
@@ -82,16 +82,16 @@ public class LoanTester {
             // Ocurre un error pues al instanciar un préstamo (de cualquier tipo)
             // el monto (75.000) supera el máximo (50.000) del destinatario (PERSONAL)
             new ..................................................
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Invalid Loan.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Invalid Loan.
         }
 
         try {
             // Ocurre un error pues al instanciar un préstamo (de cualquier tipo)
             // la cantidad de cuotas (30) supera el máximo (24) del destinatario (VEHICLE)
             new ..................................................
-        } catch (LoanException ex) {
-            System.out.println(ex.getMessage()); // Invalid Loan.
+        } catch (LoanException navegador) {
+            System.out.println(navegador.getMessage()); // Invalid Loan.
         }
     }
 }
